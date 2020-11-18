@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/11/18/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Note-java 基于Java核心技术 卷1</title>
+    <url>/2020/10/22/Note-java/</url>
+    <content><![CDATA[<h1 id="Java程序设计环境"><a href="#Java程序设计环境" class="headerlink" title="Java程序设计环境"></a><strong>Java程序设计环境</strong></h1><h2 id="开发工具包"><a href="#开发工具包" class="headerlink" title="开发工具包"></a><strong>开发工具包</strong></h2><ol>
+<li><em>Java SE 基于JDK和JRE的平台标准版；</em></li>
+<li><em>JDK-编写Java程序的软件；</em></li>
+<li><em>JRE-运行Java程序的软件。</em></li>
+</ol>
+<h1 id="Java程序设计结构"><a href="#Java程序设计结构" class="headerlink" title="Java程序设计结构"></a><strong>Java程序设计结构</strong></h1><h2 id="Java程序基本要求"><a href="#Java程序基本要求" class="headerlink" title="Java程序基本要求"></a><strong>Java程序基本要求</strong></h2><ol>
+<li><em>源代码的文件名<code>必须</code>和公共类的名字相同；</em></li>
+<li><em>Java程序内容<code>必须</code>放置在类中；</em></li>
+<li><em>类的命名采用<code>骆驼命名法</code>。</em><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;eg</span><br><span class="line">CamelCase;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a><strong>注释</strong></h2><p>*<em>1.<code>// </code>注释整行；</em><br><em>2<code>./* */ </code>注释界定的范围。</em><br><em>3.<code>/*</code></em><br> <em><code>*</code></em><br> <em><code>*</code></em><br> <code>*/</code> 注释生成文档。*</p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a><strong>数据类型</strong></h2><h3 id="整形"><a href="#整形" class="headerlink" title="整形"></a><strong>整形</strong></h3><p> <em>Java<code>没有</code>任何无符号形式的整形。</em></p>
+<h3 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a><strong>浮点型</strong></h3><ol>
+<li><em>没有后缀f的浮点型默认为double。</em></li>
+</ol>
+<h3 id="char"><a href="#char" class="headerlink" title="char"></a><strong>char</strong></h3><ol>
+<li><em>char 用<code>&#39;&#39;</code>,可以用十六进制的数值表示；</em></li>
+<li><em><code>&quot;&quot;</code>表示的是字符串；</em></li>
+<li><em><code>不要使用</code>char类型。</em></li>
+</ol>
+<h2 id="变量和常量"><a href="#变量和常量" class="headerlink" title="变量和常量"></a><strong>变量和常量</strong></h2><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a><strong>变量</strong></h3><ol>
+<li><em>变量名必须以<code>字母</code>开头；</em></li>
+<li><em>声明一个变量后，<code>必须</code>用赋值语句对变量进行显式<code>初始化</code>；</em><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">eg</span><br><span class="line">int atoday &#x3D; 22;</span><br></pre></td></tr></table></figure></li>
+<li><em><code>声明局部</code>变量时，如果可以从初始值判断变量的类型，则可以用<code>var</code>进行声明。</em></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">eg</span><br><span class="line">var atime &#x3D; 22;</span><br></pre></td></tr></table></figure>
+
+<h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a><strong>常量</strong></h3><ol>
+<li><em>利用<code>final</code>指示常量，常量名使用大写；</em></li>
+<li><em>常量为类的全局变量时，使用<code>static</code>；</em></li>
+<li><em>常量须声明在<code>main</code>外；</em></li>
+<li><em>使用<code>public</code>，则常量可以被类的其他方法使用。</em><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;eg</span><br><span class="line">public static final DONTTURN;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a><strong>枚举</strong></h3><ol>
+<li><em>枚举为数值的集合；</em></li>
+<li><em><code>Size</code>可以声明某个枚举值。</em><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;eg</span><br><span class="line">enum Size&#123;oen,two,three&#125;;</span><br><span class="line">Size s &#x3D; Size.two;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a><strong>运算符</strong></h2><h3 id="数值转换"><a href="#数值转换" class="headerlink" title="数值转换"></a><strong>数值转换</strong></h3><p><em>1.当<code>一个</code>二元运算符连接两个值时，两个值先转换为同一类型的值（<code>低往高</code>），再进行计算。</em></p>
+<h3 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a><strong>强制类型转换</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;eg</span><br><span class="line">int nx &#x3D; (int) x;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;eg</span><br><span class="line">x +&#x3D; 3.5; &#x2F;&#x2F;x为int，此处为两个二元运算符。</span><br></pre></td></tr></table></figure>
+
+<h3 id="关系符和boolean运算符"><a href="#关系符和boolean运算符" class="headerlink" title="关系符和boolean运算符"></a><strong>关系符和boolean运算符</strong></h3><ol>
+<li><em>&amp;&amp; 和 || 执行<code>短路原则</code>，即第一个<code>操作数</code>已经能确定表达式的值，第二个操作数就不再计算；</em></li>
+<li><em>&amp; 和 | 不执行<code>短路原则</code>。</em></li>
+<li><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;eg</span><br><span class="line">x&lt;y ? x:y;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a><strong>字符串</strong></h2><p><em>每个双引号括起来的字符都是String的一个实例。</em></p>
+<h3 id="子串"><a href="#子串" class="headerlink" title="子串"></a><strong>子串</strong></h3><p><em>1.提取字符串。</em></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">String greeting &#x3D; &quot;hello&quot;;</span><br><span class="line">String s &#x3D; greeting.substring(0,3);</span><br></pre></td></tr></table></figure>
+<h3 id="拼接"><a href="#拼接" class="headerlink" title="拼接"></a><strong>拼接</strong></h3><p><em>拼接的时候没有空格且拼接非字符串时，非字符串会转换为字符串。</em></p>
+<h2 id="控制流程"><a href="#控制流程" class="headerlink" title="控制流程"></a><strong>控制流程</strong></h2><h3 id="块作用域"><a href="#块作用域" class="headerlink" title="块作用域"></a><strong>块作用域</strong></h3><p><em>不能在嵌套的两个块中声明同名的变量。</em></p>
+<h3 id="多重选择-switch"><a href="#多重选择-switch" class="headerlink" title="多重选择-switch"></a><strong>多重选择-switch</strong></h3><p><em>1.如果没有相应的case，则执行default语句。</em><br><em>2.case类型： char，byte，short，int，枚举常量，字符串字面量。</em><br><em>3.break的标签必须放在跳出的循环之前。</em></p>
+<h1 id="对象和类"><a href="#对象和类" class="headerlink" title="对象和类"></a><strong>对象和类</strong></h1><h2 id="面向对象程序设计的概述"><a href="#面向对象程序设计的概述" class="headerlink" title="面向对象程序设计的概述"></a><strong>面向对象程序设计的概述</strong></h2><p><em>每个对象包含对用户公开的特定功能部分和隐藏的实现部分。</em></p>
+<h3 id="类"><a href="#类" class="headerlink" title="类"></a><strong>类</strong></h3><p><em>类是构建对象的蓝图或模板，由类构建对象的过程叫做创建类的实例。</em></p>
+<h3 id="识别类"><a href="#识别类" class="headerlink" title="识别类"></a><strong>识别类</strong></h3><p><em>首先从识别类开始，再为其添加类方法。</em></p>
+<h2 id="使用预定义类"><a href="#使用预定义类" class="headerlink" title="使用预定义类"></a><strong>使用预定义类</strong></h2><h3 id="对象与对象变量"><a href="#对象与对象变量" class="headerlink" title="对象与对象变量"></a><strong>对象与对象变量</strong></h3><p><em>创建对象时，构造器的名字与类名<code>相同</code>。</em></p>
+<h2 id="用户自定义类"><a href="#用户自定义类" class="headerlink" title="用户自定义类"></a><strong>用户自定义类</strong></h2><h3 id="var"><a href="#var" class="headerlink" title="var"></a><strong>var</strong></h3><p><em>var关键字只用于方法中的<code>局部变量</code>，参数和字段的类型必须声明。</em></p>
+<h3 id="隐市参数和显式参数"><a href="#隐市参数和显式参数" class="headerlink" title="隐市参数和显式参数"></a><strong>隐市参数和显式参数</strong></h3><p><em>在每一方法中，<code>this</code>指代隐式参数。</em></p>
+<h2 id="静态方法和静态字段"><a href="#静态方法和静态字段" class="headerlink" title="静态方法和静态字段"></a><strong>静态方法和静态字段</strong></h2><p><em>与对象无关。</em></p>
+<h3 id="main"><a href="#main" class="headerlink" title="main"></a><strong>main</strong></h3><p><em>main方法将执行和创建程序所需的对象。</em></p>
+<h2 id="方法参数"><a href="#方法参数" class="headerlink" title="方法参数"></a><strong>方法参数</strong></h2><p><em>按值调用：方法接收调用者提供的值，不可修改（java）</em><br><em>按引用调用：接收调用者提供的变量地址，可以修改。</em><br><em>java采用按值调用，不能修改基本数据类型的参数，但可以修改对象参数的<code>状态</code>。</em></p>
+<h2 id="包"><a href="#包" class="headerlink" title="包"></a><strong>包</strong></h2><ol>
+<li><em>使用包的主要原因是确保类的唯一性；</em></li>
+<li><em>嵌套的包没有联系；</em></li>
+<li><em>只能用<code>*</code>导入一个包；</em></li>
+<li><em>导入静态方法或字段可以减少编写前缀</em></li>
+</ol>
+<h2 id="权限"><a href="#权限" class="headerlink" title="权限"></a><strong>权限</strong></h2><p><em>public：越级</em><br><em>private： 本级</em><br><em>无定义：可以被当前包的<code>任何方法</code>使用。</em></p>
+<h1 id="Object类：所有类的超类"><a href="#Object类：所有类的超类" class="headerlink" title="Object类：所有类的超类"></a><strong>Object类：所有类的超类</strong></h1><h2 id="Object类型的变量"><a href="#Object类型的变量" class="headerlink" title="Object类型的变量"></a><strong>Object类型的变量</strong></h2><p>1.object类型的变量可以引用<code>任何类型</code>的对象。<br>2.对象数组和<code>基本类型的数组（数值，字符，布尔类型的数值）</code>都扩展了Object类。<br>equals方法<br>完美的equals方法编写建议</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if(this &#x3D;&#x3D; ortherObject) return true;</span><br><span class="line">if(otherObject &#x3D;&#x3D; null) return false;</span><br><span class="line">if(getClass() !&#x3D; otherObject.getGlass()) return false;</span><br><span class="line">if(!otherObject instanceof Classname) return false;</span><br><span class="line">Classname other &#x3D; (Classname) otherObject;</span><br><span class="line">return field1 &#x3D;&#x3D; otherfield1</span><br><span class="line">&amp;&amp; Object.equals(field2,otherfield2)</span><br><span class="line">...</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>策</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>自动垃圾桶</title>
+    <url>/2020/09/26/SRC/</url>
+    <content><![CDATA[<p>通过arduino，利用超声波测距来控制舵机的旋转，进而实现垃圾桶的开关</p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="1-代码"><a href="#1-代码" class="headerlink" title="1.代码"></a>1.代码</h3><p>超声波测距</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">// 设定SR04连接的Arduino引脚</span><br><span class="line">const int TrigPin = 2;</span><br><span class="line">const int EchoPin = 3;</span><br><span class="line"><span class="built_in">float</span> distance;</span><br><span class="line">void setup()</span><br><span class="line">&#123;   // 初始化串口通信及连接SR04的引脚</span><br><span class="line">        Serial.begin(9600);</span><br><span class="line">        pinMode(TrigPin, OUTPUT);</span><br><span class="line">    // 要检测引脚上输入的脉冲宽度，需要先设置为输入状态</span><br><span class="line">        pinMode(EchoPin, INPUT);</span><br><span class="line">    Serial.println(<span class="string">&quot;Ultrasonic sensor:&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">void loop()</span><br><span class="line">&#123;</span><br><span class="line">    // 产生一个10us的高脉冲去触发TrigPin</span><br><span class="line">        digitalWrite(TrigPin, LOW);</span><br><span class="line">        delayMicroseconds(2);</span><br><span class="line">        digitalWrite(TrigPin, HIGH);</span><br><span class="line">        delayMicroseconds(10);</span><br><span class="line">        digitalWrite(TrigPin, LOW);</span><br><span class="line">    // 检测脉冲宽度，并计算出距离</span><br><span class="line">        distance = pulseIn(EchoPin, HIGH) / 58.00;</span><br><span class="line">        Serial.print(distance);</span><br><span class="line">        Serial.print(<span class="string">&quot;cm&quot;</span>);</span><br><span class="line">        Serial.println();</span><br><span class="line">        delay(1000);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>舵机旋转</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#include &lt;Servo.h&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">#define PIN_SERVO 10</span></span><br><span class="line">Servo myservo;</span><br><span class="line"> </span><br><span class="line">void setup()</span><br><span class="line">&#123;</span><br><span class="line">  myservo.attach(PIN_SERVO);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">void loop()</span><br><span class="line">&#123;</span><br><span class="line">  myservo.write(0);</span><br><span class="line">  delay(1000);</span><br><span class="line">  myservo.write(40);</span><br><span class="line">  delay(1000);</span><br><span class="line">  myservo.write(80);</span><br><span class="line">  delay(3000);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>结合实现</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#include &lt;Servo.h&gt; </span></span><br><span class="line"><span class="comment">#define PIN_SERVO 10</span></span><br><span class="line"></span><br><span class="line">Servo myservo;</span><br><span class="line">// 设定SR04连接的Arduino引脚</span><br><span class="line">const int TrigPin = 2;</span><br><span class="line">const int EchoPin = 3;</span><br><span class="line"><span class="built_in">float</span> distance;</span><br><span class="line">void setup()</span><br><span class="line">&#123;   </span><br><span class="line">   myservo.attach(PIN_SERVO);</span><br><span class="line">   // 初始化串口通信及连接SR04的引脚</span><br><span class="line">        Serial.begin(9600);</span><br><span class="line">        pinMode(TrigPin, OUTPUT);</span><br><span class="line">    // 要检测引脚上输入的脉冲宽度，需要先设置为输入状态</span><br><span class="line">        pinMode(EchoPin, INPUT);</span><br><span class="line">    Serial.println(<span class="string">&quot;Ultrasonic sensor:&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">void loop()</span><br><span class="line">&#123;</span><br><span class="line">    myservo.write(0);</span><br><span class="line">    // 产生一个10us的高脉冲去触发TrigPin</span><br><span class="line">        digitalWrite(TrigPin, LOW);</span><br><span class="line">        delayMicroseconds(2);</span><br><span class="line">        digitalWrite(TrigPin, HIGH);</span><br><span class="line">        delayMicroseconds(10);</span><br><span class="line">        digitalWrite(TrigPin, LOW);</span><br><span class="line">    // 检测脉冲宽度，并计算出距离</span><br><span class="line">        distance = pulseIn(EchoPin, HIGH) / 58.00;</span><br><span class="line">        Serial.print(distance);</span><br><span class="line">        Serial.print(<span class="string">&quot;cm&quot;</span>);</span><br><span class="line">        Serial.println();</span><br><span class="line">        delay(100);</span><br><span class="line">        <span class="keyword">if</span>(distance&lt;10)</span><br><span class="line">        &#123;</span><br><span class="line">          myservo.write(0);</span><br><span class="line">          delay(1000);</span><br><span class="line">          myservo.write(160);</span><br><span class="line">          delay(3000);</span><br><span class="line">          myservo.write(0);</span><br><span class="line">         &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="视频演示"><a href="#视频演示" class="headerlink" title="视频演示"></a>视频演示</h2><iframe height=600 width=400 src="//player.bilibili.com/player.html?aid=329674322&bvid=BV1MA411J7qx&cid=239220893&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+]]></content>
+      <categories>
+        <category>修炼</category>
+      </categories>
+      <tags>
+        <tag>-arduino</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>solidworks</title>
+    <url>/2020/10/20/solidworks/</url>
+    <content><![CDATA[<h2 id="solidworks"><a href="#solidworks" class="headerlink" title="solidworks"></a>solidworks</h2><h3 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h3><p>模型通过三个步骤构成:<br>1.草图<br>2.零件<br>3.模型<br>在不同的基准面绘制草图，通过拉神，切除，扫描形成零件，然后把零件按照几何关系组装成模型。</p>
+]]></content>
+      <categories>
+        <category>策</category>
+      </categories>
+      <tags>
+        <tag>solidworks</tag>
+      </tags>
+  </entry>
+</search>

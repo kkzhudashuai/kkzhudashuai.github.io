@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>webcrawler-Wallhaven - 书院后山</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="策,简介 网络爬虫（又称为网页蜘蛛，网络机器人，在FOAF社区中间，更经常的称为网页追逐者），是一种按照一定的规则，自动地抓取万维网信息的程序或者脚本。
+项目项目目的 爬取Wallhaven上热门图片。,"> 
+    <meta name="author" content="朱二爷"> 
+    <link rel="alternative" href="atom.xml" title="书院后山" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">书院后山</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">webcrawler-Wallhaven</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">webcrawler-Wallhaven</h1>
+        <div class="stuff">
+            <span>十二月 01, 2020</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p> <strong>网络爬虫</strong>（又称为网页蜘蛛，网络机器人，在FOAF社区中间，更经常的称为网页追逐者），是一种按照一定的规则，<strong>自动</strong>地抓取万维网信息的程序或者脚本。</p>
+<h1 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h1><h2 id="项目目的"><a href="#项目目的" class="headerlink" title="项目目的"></a>项目目的</h2><p> 爬取<em>Wallhaven</em>上热门图片。</p>
+<h2 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h2><p> 利用python的<strong>urlopen</strong>方法获取页面信息，进而读取图片的详情链接，进行访问；获取图片的下载链接，访问后对返回的内容进行解码，保存。</p>
+<h2 id="具体代码"><a href="#具体代码" class="headerlink" title="具体代码"></a>具体代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br></pre></td><td class="code"><pre><span class="line">import urllib.request</span><br><span class="line">import re</span><br><span class="line">import os</span><br><span class="line">from random import choice</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 链接访问</span><br><span class="line">def url_open(url):</span><br><span class="line">    list_headers &#x3D; [&#123;&#39;user-agent&#39;:&#39;Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;86.0.4240.198 Safari&#x2F;537.36&#39;,</span><br><span class="line">                    &#39;Referer&#39;:&#39;https:&#x2F;&#x2F;wallhaven.cc&#x2F;&#39;&#125;,&#123;&#39;user-agent&#39;:&#39;Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;86.0.4240.190 Safari&#x2F;537.36&#39;,</span><br><span class="line">                    &#39;Referer&#39;:&#39;https:&#x2F;&#x2F;wallhaven.cc&#x2F;&#39;&#125;,&#123;&#39;user-agent&#39;:&#39;Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;86.0.4240.192 Safari&#x2F;537.36&#39;,</span><br><span class="line">                    &#39;Referer&#39;:&#39;https:&#x2F;&#x2F;wallhaven.cc&#x2F;&#39;&#125;,&#123;&#39;user-agent&#39;:&#39;Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;86.0.4240.194 Safari&#x2F;537.32&#39;,</span><br><span class="line">                    &#39;Referer&#39;:&#39;https:&#x2F;&#x2F;wallhaven.cc&#x2F;&#39;&#125;]</span><br><span class="line">    try:</span><br><span class="line">        req &#x3D; urllib.request.Request(url,headers&#x3D;choice(list_headers))</span><br><span class="line">        respond &#x3D; urllib.request.urlopen(req)</span><br><span class="line">    except:</span><br><span class="line">        print(&#39;获取失败！&#39;)</span><br><span class="line">        num &#x3D; 0</span><br><span class="line">        print(num)</span><br><span class="line">    else:</span><br><span class="line">        num &#x3D; 1</span><br><span class="line">        print(num)</span><br><span class="line">        return respond</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"># 图片详情获取</span><br><span class="line">def dataillink_img(respond):</span><br><span class="line">    html &#x3D; respond.read().decode(&#39;utf-8&#39;)</span><br><span class="line">    p &#x3D; r&#39;a class&#x3D;&quot;preview&quot; href&#x3D;&quot;[^&quot;]+&quot;&#39;</span><br><span class="line">    list_detaillink &#x3D; re.findall(p,html)</span><br><span class="line">    list_detaillink2 &#x3D; []</span><br><span class="line"></span><br><span class="line">    for i in list_detaillink:</span><br><span class="line">        a &#x3D; 24</span><br><span class="line">        b &#x3D; i.find(&#39;&quot;&#39;,a)</span><br><span class="line">        list_detaillink2.append(i[a:b])</span><br><span class="line"></span><br><span class="line">    for i in list_detaillink2:</span><br><span class="line">        print(i)</span><br><span class="line"></span><br><span class="line">    print(&#39;捕获结束，得到%d个图片详情链接&#39;%len(list_detaillink2))</span><br><span class="line">    </span><br><span class="line">    return list_detaillink2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#图片下载链接获取</span><br><span class="line">def downloadlink_img(list_detaillink2):</span><br><span class="line">    num &#x3D; 1</span><br><span class="line">    list_downloadlink2 &#x3D; []</span><br><span class="line">    for i in list_detaillink2:</span><br><span class="line">        respond &#x3D; url_open(i)</span><br><span class="line">        if(num !&#x3D; 0):</span><br><span class="line">            html &#x3D; respond.read().decode(&#39;utf-8&#39;)</span><br><span class="line">            p &#x3D; r&#39;img id&#x3D;&quot;wallpaper&quot; src&#x3D;&quot;([^&quot;]+g)&quot;&#39;</span><br><span class="line">            downloadlink &#x3D; re.search(p,html)</span><br><span class="line">            downloadlink2 &#x3D; downloadlink.group(1)</span><br><span class="line">            print(downloadlink2)</span><br><span class="line">            list_downloadlink2.append(downloadlink2)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    print(&#39;捕获结束，得到%d个图片下载链接&#39;%len(list_downloadlink2))</span><br><span class="line">    print(&#39;\n&#39;)</span><br><span class="line"></span><br><span class="line">    return list_downloadlink2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 图片下载</span><br><span class="line">def save_img(list_downloadlink2):</span><br><span class="line">    os.mkdir(&#39;gg&#39;)</span><br><span class="line">    os.chdir(&#39;gg&#39;)</span><br><span class="line">    num &#x3D; 1</span><br><span class="line">    many &#x3D; 0</span><br><span class="line">    </span><br><span class="line">    for i in list_downloadlink2:</span><br><span class="line">        respond &#x3D; url_open(i)</span><br><span class="line">        if(num !&#x3D; 0):</span><br><span class="line">            respond &#x3D; respond.read()</span><br><span class="line">            filename &#x3D; i.split(&#39;&#x2F;&#39;)[5]</span><br><span class="line">            </span><br><span class="line">            with open (filename,&#39;wb&#39;) as f:</span><br><span class="line">                f.write(respond)</span><br><span class="line">                </span><br><span class="line">            many +&#x3D; 1</span><br><span class="line">            print(&#39;成功保存%s&#39; %filename)</span><br><span class="line">        </span><br><span class="line">    print(&#39;共保存%d张图片&#39;%many)</span><br><span class="line">    print(&#39;完成！&#39;)</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 执行流程</span><br><span class="line">aurl &#x3D; &#39;https:&#x2F;&#x2F;wallhaven.cc&#x2F;hot?page&#x3D;5&#39;</span><br><span class="line"></span><br><span class="line">print(&#39;访问链接为：&#39;+aurl)</span><br><span class="line">print(&#39;正在获取图片的详情访问链接......&#39;)</span><br><span class="line"></span><br><span class="line">arespond &#x3D; url_open(aurl)</span><br><span class="line"></span><br><span class="line">alist_detaillink2 &#x3D; dataillink_img(arespond)</span><br><span class="line"></span><br><span class="line">print(&#39;正在获取图片的下载链接......&#39;)</span><br><span class="line"></span><br><span class="line">alist_downloadlink2 &#x3D; downloadlink_img(alist_detaillink2)</span><br><span class="line"></span><br><span class="line">print(&#39;正在保存图片......&#39;)</span><br><span class="line"></span><br><span class="line">save_img(alist_downloadlink2)</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h1><p>2020.12.01</p>
+<ol>
+<li>修复访问链接被服务器拒绝（舍弃该链接。。。我也不想的）</li>
+<li>修复空对象无法read</li>
+</ol>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://m10.music.126.net/20201125215037/922193a935b36e898872e5e90611505c/ymusic/4584/d231/4135/18dc1b61615f1b4b9372146125e17bde.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://m10.music.126.net/20201125215128/b5da178572fc3cd5da9b37210796d4fe/ymusic/423e/7230/f8fd/8ad85f9550a95c712ce0f971ec995006.mp3'></li>
+                        
+                    
+                        
+                            <li title='2' data-url='http://m10.music.126.net/20201125215211/5e46b672274313a5b562d6653b4ad992/ymusic/dd38/2f87/d483/2f690ad78ccb136a798b93b11229a85c.mp3'></li>
+                        
+                    
+                        
+                            <li title='3' data-url='http://m10.music.126.net/20201125215243/8e9504243f6b26838c24518df19a60e6/ymusic/e320/818a/016b/bfbb9fc974a56f4d7b9b545f6e8344b2.mp3'></li>
+                        
+                    
+                        
+                            <li title='4' data-url='http://m10.music.126.net/20201125215307/990c943197c9d27391c86f2cb1edf1da/ymusic/40b5/d96b/360a/66ae8d390178addc17348db519c317db.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='false'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE"><span class="toc-number">2.</span> <span class="toc-text">项目</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%9B%AE%E7%9A%84"><span class="toc-number">2.1.</span> <span class="toc-text">项目目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95"><span class="toc-number">2.2.</span> <span class="toc-text">实现方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E4%BB%A3%E7%A0%81"><span class="toc-number">2.3.</span> <span class="toc-text">具体代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%97%A5%E5%BF%97"><span class="toc-number">3.</span> <span class="toc-text">日志</span></a></li></ol>	
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
